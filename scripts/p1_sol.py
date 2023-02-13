@@ -4,21 +4,21 @@ import rbm
 import numpy as np
 
 #function to rotate x
-def rot_x():
+def rot_xyz():
+    vec = rbm.vec(0,1,1)
     a = (math.pi)/2
-    print("X: \n", rbm.rot_x(a))
-#function to rotate y	
-def rot_y():
+    rx = rbm.rot_x(a)
     b = (math.pi)/2
-    print("y: \n", rbm.rot_y(b))
-#function to rotate z		
-def rot_z():
+    ry = rbm.rot_y(b)
     c = (math.pi)/2
-    print("z: \n", rbm.rot_z(c))
+    rz = rbm.rot_z(c)
+    t = np.matmul(rx, ry, rz)
+    vec1 = t.dot(vec)
+    t = np.matmul(rx, ry, rz)
+    vec1 = t.dot(vec)
+    print("Fixed \n", vec1)
 
 	
 def main():
-    rot_x()
-    rot_y()
-    rot_z()
+    rot_xyz()
 main()
