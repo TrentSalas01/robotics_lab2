@@ -3,7 +3,7 @@ import math
 import rbm
 import numpy as np
 
-#function to rotate x
+#function to rotate x, y, x using rbm module
 def rot_xyz():
     vec = rbm.vec(0,1,1)
     a = (math.pi)/2
