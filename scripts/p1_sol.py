@@ -12,9 +12,9 @@ def rot_xyz():
     ry = rbm.rot_y(b)
     c = (math.pi)/2
     rz = rbm.rot_z(c)
-    t = np.matmul(rx, ry, rz)
+    t = np.matmul(rx, ry)
     vec1 = t.dot(vec)
-    t = np.matmul(rx, ry, rz)
+    t = np.matmul(t, rz)
     vec1 = t.dot(vec)
     print("Fixed \n", vec1)
 
